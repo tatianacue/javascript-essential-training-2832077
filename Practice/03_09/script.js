@@ -23,4 +23,18 @@ const backpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  setName: function (newName) {
+    this.name = newName;
+  },
+  setVolume: function (newVol) {
+    this.volume = newVol;
+  },
+  setColor: function (newCol) {
+    this.color = newCol;
+  },
+  setpocketNum: function (newNum) {
+    this.pocketNum = newNum;
+  },
 };
+
+backpack.setColor("blue");

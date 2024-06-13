@@ -22,3 +22,10 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+console.log("The pocketNum value:", backpack.pocketNum); // dot notation for accessing property
+console.log("strapLength L:", backpack.strapLength.left); // dot in dot (access property inside another object property)
+
+var query = "pocketNum";
+
+console.log("The pocketNum value:", backpack[query]); // bracket notation also works (you can do more advanced things like put stuff in a var)
+// bracket notation can be used for variables and unusual naming conventions
