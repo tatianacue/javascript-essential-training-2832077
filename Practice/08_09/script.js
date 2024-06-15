@@ -31,6 +31,7 @@ const frogpack = {
     this.strapLength.left = lengthLeft;
     this.strapLength.right = lengthRight;
   },
+  description: "Picture of Frogpack",
 };
 
 // Baseline HTML output
@@ -57,3 +58,25 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+const addFigure = (dataObj) => {
+  let newFigure = document.createElement("figure");
+  let newImg = document.createElement("img");
+  newImg.setAttribute("src", dataObj.image);
+  newImg.setAttribute("alt", "Pic of Frog Backpack");
+  let newDesc = document.createElement("figcaption");
+  newDesc.innerText = dataObj.description;
+
+  newFigure.append(newImg, newDesc);
+
+  return newFigure;
+};
+
+const createArticle = (frogpack) => {
+  const newArticle = document.createElement("article");
+  newArticle.innerHTML = content;
+  newArticle.prepend(addFigure(frogpack));
+  return newArticle;
+};
+
+document.querySelector("main").append(createArticle(frogpack));
